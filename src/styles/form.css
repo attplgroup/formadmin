@@ -61,6 +61,13 @@
     opacity: 1; 
     transform: translateX(0); 
   }
+
+  .button-container{
+    height: 100px; 
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
   
   @keyframes slideFadeInnext {
     0% { opacity: 0; transform: translateX(100px); }

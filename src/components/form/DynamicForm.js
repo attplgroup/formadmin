@@ -41,7 +41,7 @@ function DynamicForm({ fields, onNext, onPrev, formData, handleInputChange }) {
           formData={formData}
           handleInputChange={handleInputChange}
         />
-        <div style={{ height: "100px", width: "100%" }}>
+        <div className="button-container">
           <div className="form-button-next">
             <button className="next-button" type="submit">
               <span>&rarr;</span>

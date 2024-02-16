@@ -1,0 +1,74 @@
+
+  .phone-number-input {
+    display: flex;
+    margin-top: 20%;
+    align-items: center;
+  
+  }
+  
+  .custom-radio {
+    border: 0.1rem solid #ccc; 
+    border-radius: 1.25rem; 
+    padding: 0.5rem 1rem; 
+    margin: 0.5rem 0; 
+    display: block;
+    width: 25rem; 
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .custom-radio:hover {
+    transform: scale(1.02);
+  }
+  
+
+  .input-row-div label {
+    display: block;
+    margin-bottom: 5px; 
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    font-weight: normal; 
+  }
+  
+  .input-row-div label.required {
+    color: red; 
+  }
+  
+  .input-row-div label.required:after {
+    font-style: italic;
+  }
+
+  .form-group {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(100px); 
+    height: 100%;
+  }
+  
+  .form-group.fade-in-next {
+    opacity: 0; 
+    transform: translateX(100px); 
+    animation: slideFadeInnext 0.3s ease-in-out forwards;
+  }
+  .form-group.fade-in-prev {
+    opacity: 0; 
+    transform: translateX(-100px);
+    animation: slideFadeInprev 0.3s ease-in-out forwards;
+  }
+  
+  .form-group.visible {
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+  
+  @keyframes slideFadeInnext {
+    0% { opacity: 0; transform: translateX(100px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes slideFadeInprev {
+    0% { opacity: 0; transform: translateX(-100px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  
+  

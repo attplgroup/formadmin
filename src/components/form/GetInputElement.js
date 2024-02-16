@@ -25,7 +25,7 @@ const GetInputElement = ({ field, formData, handleInputChange }) => {
   const handleClearInput = () => {
     handleInputChange({
       name: field.name,
-      value: "", // Clear the input value
+      value: "",
     });
   };
 

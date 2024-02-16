@@ -153,7 +153,6 @@ const formFields = {
       inputOptionClassName: "",
       required: true,
     },
-    // Add more income proof related fields
   ],
 
   employmentVerificationFields: [
@@ -168,7 +167,6 @@ const formFields = {
       inputOptionClassName: "",
       required: true,
     },
-    // Add more employment verification related fields
   ],
 
   annualIncomeFields: [
@@ -181,7 +179,6 @@ const formFields = {
       inputOptionClassName: "",
       required: true,
     },
-    // Add more annual income related fields
   ],
 
   emailFields: [
@@ -194,7 +191,6 @@ const formFields = {
       inputOptionClassName: "",
       required: true,
     },
-    // Add more email related fields
   ],
 
   desiredLoanAmountFields: [
@@ -214,7 +210,6 @@ const formFields = {
       inputOptionClassName: "",
       required: true,
     },
-    // Add more desired loan amount related fields
   ],
 
   ////////////////////////

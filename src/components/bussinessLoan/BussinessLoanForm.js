@@ -1,4 +1,3 @@
-// BusinessLoanForm.js
 import React from "react";
 
 function BusinessLoanForm() {

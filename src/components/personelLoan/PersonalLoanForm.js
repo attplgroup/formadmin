@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import DynamicForm from "../form/DynamicForm";
-import formFields from "../FormFeild"; // assuming all fields are imported directly
+import formFields from "../FormFeild";
 
 const PersonalLoanForm = () => {
-  const [step, setStep] = useState(1); // Start on step 1
+  const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
 
   const handleInputChange = ({ name, value }) => {
@@ -16,7 +16,6 @@ const PersonalLoanForm = () => {
 
   const onNext = () => {
     if (step >= getNumSteps()) {
-      // Handle reaching the last step (e.g., submit the form)
       return;
     }
     setStep((prevStep) => prevStep + 1);
@@ -24,23 +23,20 @@ const PersonalLoanForm = () => {
 
   const onPrev = () => {
     if (step <= 1) {
-      // Handle being on the first step (e.g., disable the "Prev" button)
       return;
     }
     setStep((prevStep) => prevStep - 1);
   };
 
-  // Calculate the number of steps based on field groups
   const getNumSteps = () => {
-    const numSteps = Object.keys(formFields).length; // count field groups
-    return Math.min(numSteps); // ensure step limit (optional)
+    const numSteps = Object.keys(formFields).length;
+    return Math.min(numSteps);
   };
 
   const getFieldsForStep = (currentStep) => {
-    // Get the correct field group based on the current step
     const fieldGroupNames = Object.keys(formFields);
     if (currentStep <= 0 || currentStep > fieldGroupNames.length) {
-      return []; // handle invalid step numbers
+      return [];
     }
     const fieldName = fieldGroupNames[currentStep];
     return formFields[fieldName];
@@ -56,7 +52,7 @@ const PersonalLoanForm = () => {
             </div>
           </div>
           <div className="form-content">
-            {step > 0 && ( // render form from step 2 onwards
+            {step > 0 && (
               <DynamicForm
                 fields={getFieldsForStep(step)}
                 onNext={onNext}

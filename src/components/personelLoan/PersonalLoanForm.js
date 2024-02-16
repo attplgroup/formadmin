@@ -5,6 +5,9 @@ import formFields from "../FormFeild";
 const PersonalLoanForm = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
+  const [errors, setErrors]=useState({})
+ 
+
 
   const handleInputChange = ({ name, value }) => {
     console.log(name, value);
@@ -12,7 +15,14 @@ const PersonalLoanForm = () => {
       ...formData,
       [name]: value,
     });
+  
+    if (name === "phoneNo" && value.length === 10) {
+      return; 
+    } else {
+      setErrors({ ...errors, phoneNo: "Phone number must be 10 digits long" });
+    }
   };
+  
 
   const onNext = () => {
     if (step >= getNumSteps()) {
@@ -59,6 +69,7 @@ const PersonalLoanForm = () => {
                 onPrev={onPrev}
                 formData={formData}
                 handleInputChange={handleInputChange}
+                
               />
             )}
           </div>

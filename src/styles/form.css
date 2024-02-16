@@ -43,7 +43,6 @@
     flex-direction: column;
     justify-content: space-between;
     transform: translateX(100px); 
-    height: 100%;
   }
   
   .form-group.fade-in-next {
@@ -65,7 +64,7 @@
   .button-container{
     height: 100px; 
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
   }
   

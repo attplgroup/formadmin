@@ -16,8 +16,8 @@ const PersonalLoanForm = () => {
       [name]: value,
     });
   
-    if (name === "phoneNo" && value.length === 10) {
-      return; 
+    if (name === "phoneNo" && value.length !== 10) {
+      return;
     } else {
       setErrors({ ...errors, phoneNo: "Phone number must be 10 digits long" });
     }

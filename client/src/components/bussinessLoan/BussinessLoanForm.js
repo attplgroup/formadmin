@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import DynamicForm from "../form/DynamicForm";
-import formFields from "../FormFeild";
+import bussinessLoanFormFields from "./BussinessLoanFormField";
 
-const PersonalLoanForm = () => {
+const BusinessLoanForm = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
 
@@ -29,17 +29,17 @@ const PersonalLoanForm = () => {
   };
 
   const getNumSteps = () => {
-    const numSteps = Object.keys(formFields).length;
+    const numSteps = Object.keys(bussinessLoanFormFields).length;
     return Math.min(numSteps);
   };
 
   const getFieldsForStep = (currentStep) => {
-    const fieldGroupNames = Object.keys(formFields);
+    const fieldGroupNames = Object.keys(bussinessLoanFormFields);
     if (currentStep <= 0 || currentStep > fieldGroupNames.length) {
       return [];
     }
     const fieldName = fieldGroupNames[currentStep];
-    return formFields[fieldName];
+    return bussinessLoanFormFields[fieldName];
   };
 
   return (
@@ -48,7 +48,7 @@ const PersonalLoanForm = () => {
         <div className="form-container">
           <div className="form-header">
             <div className="form-header-div">
-              <h2>{formFields.header}</h2>
+              <h2>{bussinessLoanFormFields.header}</h2>
             </div>
           </div>
           <div className="form-content">
@@ -68,4 +68,4 @@ const PersonalLoanForm = () => {
   );
 };
 
-export default PersonalLoanForm;
+export default BusinessLoanForm;

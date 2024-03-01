@@ -1,5 +1,5 @@
-const formFields = {
-  header: "Personel Loan",
+const bussinessLoanFormFields = {
+  header: "Bussiness Loan",
   loginFields: [
     {
       title: "Apply For LOan",
@@ -609,4 +609,4 @@ const formFields = {
   ],
 };
 
-module.exports = formFields;
+module.exports = bussinessLoanFormFields;
